@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class BunTest {
@@ -26,12 +26,12 @@ public class BunTest {
     }
 
     @Test
-    public void getNameReturnCorrectValue()  {
+    public void getNameReturnCorrectValue() {
         assertEquals("Ожидалось, что название будет " + name, name, (new Bun(name, price)).getName());
     }
 
     @Test
-    public void getPriceReturnCorrectValue()  {
+    public void getPriceReturnCorrectValue() {
         assertEquals("Ожидалось, что цена будет = " + price, price, (new Bun(name, price)).getPrice(), 0);
     }
 }

@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static praktikum.IngredientType.FILLING;
 import static praktikum.IngredientType.SAUCE;
 
@@ -30,19 +30,19 @@ public class IngredientTest {
     }
 
     @Test
-    public void getPriceReturnCorrectValue()  {
+    public void getPriceReturnCorrectValue() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ожидается, что вернется " + price, price, ingredient.getPrice(), 0);
     }
 
     @Test
-    public void getNameReturnCorrectValue()  {
+    public void getNameReturnCorrectValue() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ожидается, что вернется " + name, name, ingredient.getName());
     }
 
     @Test
-    public void getTypeReturnCorrectValue()  {
+    public void getTypeReturnCorrectValue() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ожидается, что вернется " + type, type, ingredient.getType());
     }
